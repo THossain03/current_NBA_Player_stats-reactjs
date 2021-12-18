@@ -13,6 +13,10 @@
   }
 }
 
+.App-extra {
+  color:aliceblue;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -25,7 +29,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #bd1b1b;
 }
 
 @keyframes App-logo-spin {

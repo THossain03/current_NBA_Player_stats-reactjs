@@ -9,6 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <a className="App-extra" href="https://www.nba.com/" target="_blank"> My favorite site </a>
         <a
           className="App-link"
           href="https://reactjs.org"
