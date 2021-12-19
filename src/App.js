@@ -1,10 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+       <div>
+      <p>The second part </p>
+      <header className='App-nav'>
+        <a href='https://www.nba.com/'>Here we go!</a>
+      </header>
+      </div>
+      <div> 
+    <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -19,6 +27,7 @@ function App() {
           Learn React with Tameem and Tanisha
         </a>
       </header>
+      </div>
     </div>
   );
 }
