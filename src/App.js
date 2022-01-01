@@ -1,16 +1,39 @@
 import logo from './logo.svg';
+import React,{useState,useEffect} from 'react';
 import './App.css';
 import './index.js';
 
 function App() {
+  const [data,setData] = useState([]);
+  const getData=()=>{
+    fetch('data.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }).then(function(response) {
+      console.log(response)
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(myJson);
+      setData(myJson)
+    });
+  }
+  
+  useEffect(()=>{
+    getData()
+  },[])
+
   return (
     <div className="App">
-       <div>
-      <p>The second part </p>
-      <header className='App-nav'>
-        <a href='https://www.nba.com/'>Here we go!</a>
-      </header>
+      <div className='standings_out'>
+        {
+          data && data.length>0 && data.map((item)=><p>{item.about}</p>)
+        }
       </div>
+      
       <div> 
     <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
